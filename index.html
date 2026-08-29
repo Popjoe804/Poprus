@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b1018">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>POPRUS: Shadow Quest</title>
+</head>
+<body>
+<div id="app">
+  <section id="home" class="screen active">
+    <img class="cover" src="assets/hero-sunglasses.jpg" alt="POPRUS hero">
+    <div class="shade"></div>
+    <div class="home-content">
+      <div class="badge">ORIGINAL ACTION ADVENTURE</div>
+      <h1>POPRUS</h1><h2>SHADOW QUEST</h2>
+      <p class="tagline">Rise. Explore. Fight. Protect.</p>
+      <button id="newGame">▶ PLAY</button>
+      <button id="storyButton">📖 STORY</button>
+      <button id="howButton">🎮 HOW TO PLAY</button>
+      <p class="version">Ultimate Edition • Mobile Prototype</p>
+    </div>
+  </section>
+
+  <section id="story" class="screen info">
+    <img src="assets/hero-dog.jpg" alt="Hero and companion">
+    <div class="panel">
+      <h2>THE LEGEND OF POPRUS</h2>
+      <p>A dark force has scattered the ancient Shadow Stones across the land. POPRUS begins a dangerous journey through the Wild Forest, Lost Village and Mountain Fortress. A loyal companion follows the hero into the unknown.</p>
+      <button class="back">BACK</button><button class="play">BEGIN QUEST</button>
+    </div>
+  </section>
+
+  <section id="how" class="screen info">
+    <div class="panel full">
+      <h2>HOW TO PLAY</h2>
+      <p>Use the arrow controls to move. Collect coins and energy crystals. Touch ATTACK near an enemy to defeat it. Reach the fortress to complete the mission.</p>
+      <div class="legend">🪙 Coins &nbsp; 💎 Energy &nbsp; 👾 Enemy &nbsp; 🏰 Goal</div>
+      <button class="back">BACK</button>
+    </div>
+  </section>
+
+  <section id="game" class="screen">
+    <header class="hud">
+      <div>❤️ <b id="hp">5</b></div>
+      <div>🪙 <b id="coins">0</b></div>
+      <div>💎 <b id="power">0</b></div>
+      <div>LVL <b id="level">1</b></div>
+    </header>
+    <div id="message">MISSION: Reach the fortress</div>
+    <main id="world">
+      <div id="goal" class="goal">🏰</div>
+      <div id="player" class="player"><img src="assets/hero-casual.jpg" alt="POPRUS"></div>
+      <div class="enemy" style="left:45%;bottom:58%">👾</div>
+      <div class="enemy" style="left:72%;bottom:25%">👾</div>
+      <div class="tree" style="left:22%;bottom:50%">🌲</div>
+      <div class="tree" style="left:60%;bottom:45%">🌲</div>
+      <div class="tree" style="left:80%;bottom:62%">🌲</div>
+      <div class="coin" style="left:19%;bottom:28%">🪙</div>
+      <div class="coin" style="left:35%;bottom:70%">🪙</div>
+      <div class="coin" style="left:58%;bottom:18%">🪙</div>
+      <div class="coin" style="left:84%;bottom:42%">🪙</div>
+      <div class="power" style="left:28%;bottom:55%">💎</div>
+      <div class="power" style="left:68%;bottom:70%">💎</div>
+    </main>
+    <div class="controls">
+      <button data-dir="up">▲</button>
+      <div><button data-dir="left">◀</button><button id="attack">⚔ ATTACK</button><button data-dir="right">▶</button></div>
+      <button data-dir="down">▼</button>
+    </div>
+    <button id="pause">MENU</button>
+  </section>
+
+  <section id="complete" class="screen info">
+    <img src="assets/hero-dog.jpg" alt="Mission complete">
+    <div class="panel">
+      <h2>MISSION COMPLETE! 🏆</h2>
+      <p>You defeated the shadows and reached the fortress.</p>
+      <p>Coins: <b id="finalCoins">0</b> • Power: <b id="finalPower">0</b></p>
+      <button id="next">NEXT MISSION</button><button class="back">MAIN MENU</button>
+    </div>
+  </section>
+</div>
+<script src="game.js"></script>
+</body>
+</html>

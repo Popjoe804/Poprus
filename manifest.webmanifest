@@ -1,0 +1,9 @@
+{
+  "name": "POPRUS: Shadow Quest",
+  "short_name": "POPRUS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1018",
+  "theme_color": "#0b1018",
+  "description": "An original mobile action-adventure game prototype."
+}
